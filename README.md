@@ -52,7 +52,7 @@ Users should be able to:
 
 
           
-###What I learned
+### What I learned
 
 1. **Responsive Images with Picture Element**:
    I learned how to use the `<picture>` element with media queries to serve different images based on viewport width:
