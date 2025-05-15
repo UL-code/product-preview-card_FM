@@ -14,9 +14,8 @@ This is a solution to the [Product preview card component challenge on Frontend 
   - [Continued development](#continued-development)
   - [Useful resources](#useful-resources)
 - [Author](#author)
-- [Acknowledgments](#acknowledgments)
 
-**Note: Delete this note and update the table of contents based on what sections you keep.**
+
 
 ## Overview
 This challenge focuses on building a responsive product preview card component. The main goal is to create an attractive and functional product display that adapts seamlessly to different screen sizes. The component includes product images, pricing information, and an "Add to Cart" button.
@@ -37,7 +36,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: (https://ul-code.github.io/product-preview-card_FM/)
 
 ## My process
 
@@ -46,61 +45,83 @@ Users should be able to:
 - Semantic HTML5 markup
 - CSS custom properties
 - Flexbox
-- CSS Grid
 - Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
 
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
 
-### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
 
-To see how you can add code snippets, see below:
 
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
-```css
-.proud-of-this-css {
-  color: papayawhip;
-}
-```
-```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
-}
-```
+          
+###What I learned
 
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
+1. **Responsive Images with Picture Element**:
+   I learned how to use the `<picture>` element with media queries to serve different images based on viewport width:
+   ```html
+   <picture>
+     <source srcset="./images/image-product-desktop.jpg" media="(min-width: 48rem)">
+     <img src="./images/image-product-mobile.jpg" alt="Gabrielle Essence Eau De Parfum image" />
+   </picture>
+   ```
+   This technique helps optimize image delivery for different screen sizes.
+   Reference: [Picture Element Documentation](https://web.dev/learn/design/picture-element)
 
-**Note: Delete this note and the content within this section and replace with your own learnings.**
+2. **Consistent Font Sizing with REM**:
+   I implemented a scalable font system using REM units, making the typography responsive and maintainable. Setting the root font-size to 62.5% (10px) made REM calculations more intuitive:
+   ```css
+   html {
+       font-size: 62.5%;
+   }
+   ```
+
+3. **Interactive Button States**:
+   I learned to enhance button interactivity using the `:active` pseudo-class:
+   ```css
+   .add-to-cart:active {
+       background-color: var(--color-green-700);
+   }
+   ```
+
+4. **CSS Custom Properties**:
+   I utilized CSS variables for consistent color management throughout the project:
+   ```css
+   :root {
+     --color-green-500: hsl(158, 36%, 37%);
+     --color-green-700: hsl(158, 42%, 18%);
+   }
+   ```
 
 ### Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
+Moving forward, I plan to focus on several key areas to enhance my development skills:
 
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
+1. **Advanced CSS Grid Layouts**
+   - Master complex grid systems
+   - Implement responsive grid patterns
+   - Explore grid-template-areas for layout management
+
+2. **CSS Animation and Transitions**
+   - Create smooth, performant animations
+   - Implement more sophisticated hover effects
+   - Learn keyframe animations for enhanced interactivity
+
+3. **Accessibility Best Practices**
+   - Improve ARIA implementation
+   - Enhance keyboard navigation
+   - Ensure proper semantic HTML structure
+
+4. **CSS Architecture**
+   - Explore BEM methodology more deeply
+   - Implement CSS custom properties more effectively
+   - Study scalable CSS organization patterns
+
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
+- [Frontend Mentor Learning Path: Building Responsive Layouts](https://www.frontendmentor.io/learning-paths/building-responsive-layouts--z1qCXVqkD) - This guide helped me understand responsive design principles and best practices.
 
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
+- [Picture Element Documentation](https://web.dev/learn/design/picture-element) - This resource was invaluable for learning how to implement responsive images properly. It provides clear examples and explain each step.
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
+- Frontend Mentor - [@UL-code](https://www.frontendmentor.io/profile/UL-code)
 
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
-
-## Acknowledgments
-
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
-
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
